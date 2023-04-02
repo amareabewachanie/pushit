@@ -1,4 +1,4 @@
-FROM node:14-alpine AS install-dependencies
+FROM node:14-alpine AS development
 
 ENV PORT=3333
 ENV PORT_SSR=4000
