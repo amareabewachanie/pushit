@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "clip": "apps/clip",
+    "clip-e2e": "apps/clip-e2e",
+    "libs-ui-spinner": "libs/libs/ui/spinner",
+    "libs-ui-video-player": "libs/libs/ui/video-player"
+  }
+}

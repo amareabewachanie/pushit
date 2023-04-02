@@ -1,0 +1,25 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/libs/ui/video-player/src",
+  "prefix": "pushit",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/libs/ui/video-player"],
+      "options": {
+        "jestConfig": "libs/libs/ui/video-player/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/libs/ui/video-player/**/*.ts",
+          "libs/libs/ui/video-player/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

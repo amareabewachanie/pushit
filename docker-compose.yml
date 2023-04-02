@@ -1,0 +1,18 @@
+
+version: '3.4'
+
+services:
+  web:
+    image: clip_api
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+      # PORT: 3333
+    ports:
+      - 3333:3333
+    command: nx serve api
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules

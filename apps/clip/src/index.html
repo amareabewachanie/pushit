@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Clip</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+
+    <pushit-root>
+      <style>
+        body,
+        html {
+          height: 100%;
+          background: #EDF2F6;
+          margin: 0;
+        }
+
+        #flex-container {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-flex-direction: row;
+          -moz-box-flex-direction: row;
+          -webkit-flex-direction: row;
+          flex-direction: row;
+          height: 100%;
+          background: #f5f7fb;
+        }
+
+        #flex-item {
+          margin: auto;
+        }
+
+        svg path,
+        svg rect {
+          fill: #2475BB;
+        }
+
+        .spinner {
+          animation: rotate 2s linear infinite;
+          z-index: 2;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -25px 0 0 -25px;
+          width: 50px;
+          height: 50px;
+        }
+
+        .spinner .path {
+          stroke: #2475BB;
+          stroke-linecap: round;
+          animation: dash 1.5s ease-in-out infinite;
+        }
+
+        @keyframes rotate {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        @keyframes dash {
+          0% {
+            stroke-dasharray: 1, 150;
+            stroke-dashoffset: 0;
+          }
+
+          50% {
+            stroke-dasharray: 90, 150;
+            stroke-dashoffset: -35;
+          }
+
+          100% {
+            stroke-dasharray: 90, 150;
+            stroke-dashoffset: -124;
+          }
+        }
+      </style>
+      <div id="flex-container">
+        <svg class="spinner" viewBox="0 0 50 50">
+          <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+        </svg>
+      </div>
+    </pushit-root>
+  </body>
+</html>
